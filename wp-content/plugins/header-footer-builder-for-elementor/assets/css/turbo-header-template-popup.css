@@ -1,0 +1,304 @@
+.tahefobu-header-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tahefobu-header-popup-modal {
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 8px;
+    width: 700px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    font-family: "Roboto", sans-serif;
+}
+.modal-header-style h2{
+    color: #2e3195;
+    font-weight: 500;
+}
+
+.header-title-modal{
+    font-size: 16px;
+    color: #333333;
+    text-align: left;
+    margin-bottom: -10px;
+}
+/* //input field name// */
+#tahefobu-header-template-title{ 
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 18px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #A7ADB3;
+}
+
+.select2-container--default .select2-selection--multiple{
+    font-size: 14px;
+    border-radius: 6px !important;
+    border: 1px solid #A7ADB3;
+    padding-bottom:10px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.modal-header-style{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #bdbdbd77;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #333333;
+}
+.modal-header-style img{
+    height: 50px;
+}
+
+.select2-container {
+    z-index: 999999 !important;
+}
+
+.select2-dropdown {
+    z-index: 999999 !important;
+}
+.tahefobu-header-popup-modal .modal-include-exclude-style{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.tahefobu-header-creat-edit-button{
+    background-color: #2e3195 !important;
+    color: #eee !important;
+    padding: 2px 20px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    outline: none !important;
+    border: 1px solid #777777 !important;
+}
+.tahefobu-header-cancel-button{
+    background-color: #ecedee !important;
+    color: #333 !important;
+    padding: 2px 20px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    outline: none !important;
+    border: 1px solid #777777 !important;
+}
+
+/* --------------------------------------condition modal// */
+.modal-display-conditions-field-style{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    align-items: flex-start;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    gap: 8px;
+}
+.modal-display-conditions-field-style select{
+    width: 100%;
+    padding: 20px;
+}
+
+
+.tahefobu_condition-save-button-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #fff !important;
+}
+
+/* tahefobu-header-popup-header-style */
+.tahefobu-header-popup-header-style{
+    text-align: left;
+}
+.tahefobu-header-popup-header-style h3{
+    text-align: left;
+}
+.tahefobu-header-popup-header-style label{
+    font-size: 18px;
+    line-height: 100%;
+    line-height: 100%;
+}
+
+
+.tahefobu-header-style-options {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.tahefobu-header-style-options h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.tahefobu-header-style-options label {
+    text-align: left;
+    align-items: center;
+    margin: 0 10px 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tahefobu-header-style-options input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #333; 
+}
+
+
+.tahefobu-header-popup-header-style {
+    margin-top: 25px;
+}
+
+.tahefobu-header-popup-header-style h3 {
+    margin-bottom: 10px;
+}
+
+.tahefobu-header-popup-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tahefobu-style-options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tahefobu-style-options label{
+    font-size: 16px;
+    color: #777777;
+}
+
+/* scrollbar style in condition modal */
+
+#tahefobu_edit_include_pages::-webkit-scrollbar,
+#tahefobu_edit_exclude_pages::-webkit-scrollbar {
+    width: 10px;
+}
+
+#tahefobu_edit_include_pages::-webkit-scrollbar-track,
+#tahefobu_edit_exclude_pages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+#tahefobu_edit_include_pages::-webkit-scrollbar-thumb,
+#tahefobu_edit_exclude_pages::-webkit-scrollbar-thumb {
+    background: #3E44C7;
+    border-radius: 5px;
+}
+
+#tahefobu_edit_include_pages::-webkit-scrollbar-thumb:hover,
+#tahefobu_edit_exclude_pages::-webkit-scrollbar-thumb:hover {
+    background: #2b2ea8;
+}
+
+
+#tahefobu_edit_include_pages::-webkit-scrollbar {
+    width: 10px;
+}
+
+#tahefobu_edit_include_pages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+#tahefobu_edit_include_pages::-webkit-scrollbar-thumb {
+    background: #3E44C7; 
+    border-radius: 5px;
+}
+
+#tahefobu_edit_include_pages::-webkit-scrollbar-thumb:hover {
+    background: #2b2ea8;
+}
+
+
+/* footer // */
+#tahefobu-footer-template-title{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 18px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #A7ADB3;
+}
+
+/* //modal multiple select area field // */
+.tahefobu-header-popup-modal .select2-selection--clearable{
+    max-height: 100px;
+    overflow: none;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+/* //scroll style in multiple select area field  */
+.tahefobu-header-popup-modal .select2-selection--multiple::-webkit-scrollbar {
+    width: 6px;
+}
+.tahefobu-header-popup-modal .select2-selection--multiple::-webkit-scrollbar-track {
+    background: #ff0b5c00;
+}
+.tahefobu-header-popup-modal .select2-selection--multiple::-webkit-scrollbar-thumb {
+    background: #3E44C7;
+    border-radius: 4px;
+    width:5px;
+}
+
+/* Ensure selected options in Select2 dropdown are visibly highlighted inside our popup */
+.tahefobu-header-popup-modal .select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: #e9f2ff;
+    color: #0b3d91;
+}
+.tahefobu-header-popup-modal .select2-container--default .select2-results__option[aria-selected="true"]::after {
+    content: "\2713";
+    float: right;
+    color: #0b3d91;
+    font-weight: 700;
+}
+.tahefobu-header-popup-modal .select2-container--default .select2-results__option[aria-selected="true"] {
+    /* make sure selection stands out even if other CSS resets exist */
+    border-left: 4px solid rgba(62,68,199,0.12);
+}
+
+/* Fallback/global rule: ensure Select2 dropdown options marked selected are visually distinct */
+.select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: #e9f2ff !important;
+    color: #0b3d91 !important;
+}
+.select2-container--default .select2-results__option[aria-selected="true"]::after {
+    content: "\2713";
+    float: right;
+    color: #0b3d91;
+    font-weight: 700;
+}

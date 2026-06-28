@@ -1,0 +1,101 @@
+/* header style  */
+
+/* Base header z-index - ensures header is always above content even without sticky/animation */
+.turbo-header-template,
+#tahefobu-header {
+    position: relative;
+    z-index: 9999;
+}
+
+/* Sticky Header */
+.ta-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+
+/* Transition class to smoothly show/hide header */
+.turbo-header-template.ta-header-scroll-animation {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    /* transition: transform 0.3s ease, opacity 0.3s ease; */
+}
+
+/* When scrolling down, hide header */
+.ta-header-hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* When scrolling up, show header */
+.ta-header-show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.ta-header-scroll-animation {
+    transition: transform 0.3s ease;
+}
+.ta-header-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+
+/* ===== Admin bar gap fix ===== */
+/* WordPress adds margin-top to <body> when the admin bar is visible.
+   For sticky/animated headers, the JS sets top = adminBarH so they stick
+   flush under the admin bar — no negative margins needed here.
+   The body margin-top naturally pushes static headers down correctly too. */
+
+/* ===== Sticky + Animation hardening (desktop-safe) ===== */
+
+/* 1) Use a CSS var for the top offset (handles WP admin bar automatically via JS) */
+.ta-sticky-header,
+.turbo-header-template.ta-header-scroll-animation {
+  top: var(--ta-sticky-top, 0);
+}
+
+/* 2) Fixed fallback when themes break CSS sticky on desktop.
+   Works with either the new #tahefobu-header id or your existing wrapper class. */
+#tahefobu-header.ta-sticky-active,
+.turbo-header-template.ta-sticky-active {
+  position: fixed;
+  top: var(--ta-sticky-top, 0);
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999; /* above theme headers */
+}
+
+/* 3) Spacer to prevent content jump when switching to fixed */
+.ta-header-spacer {
+  display: none;
+  width: 100%;
+}
+
+/* 4) Scroll hide/show — support both your old class names and the new ones used by JS */
+#tahefobu-header.ta-scroll-down,
+.turbo-header-template.ta-scroll-down,
+.ta-header-hidden,         /* your existing */
+.ta-header-hide {          /* your existing */
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+#tahefobu-header.ta-scroll-up,
+.turbo-header-template.ta-scroll-up,
+.ta-header-show {          /* your existing */
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 5) Make sure transitions are smooth on the animated wrapper */
+#tahefobu-header,
+.turbo-header-template.ta-header-scroll-animation {
+  transition: transform .25s ease, opacity .25s ease;
+  will-change: transform;
+}

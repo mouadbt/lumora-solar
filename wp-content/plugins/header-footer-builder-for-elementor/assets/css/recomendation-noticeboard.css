@@ -1,0 +1,221 @@
+/* =============================================================
+   Turbo H&F Builder — Recommendation Notice Board
+   ============================================================= */
+
+#hfb-turbo-notice {
+    padding: 0 !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .10);
+    margin: 16px 0 20px;
+    cursor: pointer;
+    width: 98%;
+    /* Must be relative so the dismiss button can sit above the image overlay */
+    position: relative;
+}
+
+#hfb-turbo-notice .notice-dismiss {
+    color: rgba(255, 255, 255, 0.986) !important;
+    background-color: #000000;
+    border-radius: 100%;
+    /* Sit above the image ::before overlay (z-index 1) */
+    z-index: 100;
+    position: absolute;
+}
+
+#hfb-turbo-notice .notice-dismiss::before {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 16px;
+}
+
+#hfb-turbo-notice .notice-dismiss:hover::before {
+    color: #ee5959 !important;
+}
+
+/* ── Main wrapper ─────────────────────────────────────────── */
+.hfb-notice-inner {
+    display: flex;
+    align-items: stretch;
+    background: linear-gradient(120deg, #1a1a2e 0%, #2e3195 55%, #3d42c0 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 110px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── Accent stripe ────────────────────────────────────────── */
+.hfb-notice-stripe {
+    width: 5px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #ff8800, #ff5e00);
+}
+
+/* ── Body ─────────────────────────────────────────────────── */
+.hfb-notice-body {
+    flex: 1;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ── Social proof pill ────────────────────────────────────── */
+.hfb-social-proof h3{
+    display: inline-flex;
+    /* align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, .10);
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 20px;
+    padding: 3px 12px 3px 6px;
+    font-size: 11px; */
+    color: rgba(255, 255, 255, .85);
+    width: fit-content;
+    line-height: 2px;
+}
+
+.hfb-social-proof .hfb-stars {
+    color: #fbbf24;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* ── Headline ─────────────────────────────────────────────── */
+.hfb-notice-headline {
+    font-size: 16px !important;
+    font-weight: 500;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hfb-notice-headline .hfb-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #ff8800;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+/* ── Feature bullets ──────────────────────────────────────── */
+.hfb-notice-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hfb-notice-features li {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .82);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hfb-notice-features li::before {
+    content: '✓';
+    color: #4ade80;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* ── Action buttons ───────────────────────────────────────── */
+.hfb-notice-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hfb-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    background: linear-gradient(135deg, #ff8800, #ff5e00);
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none !important;
+    border: none;
+    cursor: pointer;
+    transition: all .15s ease;
+    box-shadow: 0 3px 12px rgba(255, 94, 0, .40);
+    letter-spacing: .2px;
+    white-space: nowrap;
+}
+
+.hfb-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 18px rgba(255, 94, 0, .55);
+    background: linear-gradient(135deg, #ff9a1a, #ff6a10);
+    color: #fff !important;
+}
+
+.hfb-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, .12);
+    color: rgba(255, 255, 255, .92) !important;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none !important;
+    border: 1.5px solid rgba(255, 255, 255, .25);
+    transition: all .15s ease;
+    white-space: nowrap;
+}
+
+.hfb-btn-secondary:hover {
+    background: rgba(255, 255, 255, .20);
+    border-color: rgba(255, 255, 255, .5);
+    color: #fff !important;
+}
+
+/* ── Right image ──────────────────────────────────────────── */
+.hfb-notice-image {
+    width: 220px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hfb-notice-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    display: block;
+}
+
+.hfb-notice-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(46, 49, 149, .7) 0%, transparent 50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 960px) {
+    .hfb-notice-image { display: none; }
+}
+
+@media (max-width: 600px) {
+    .hfb-notice-body { padding: 14px 16px; }
+    .hfb-notice-headline { font-size: 14px; }
+}

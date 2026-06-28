@@ -1,0 +1,40 @@
+/* ==========================most top bar======================// */
+
+.tahefobu-most-top-bar-left-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.tahefobu-most-topbar-right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tahefobu-most-top-bar-icon-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.tahefobu-most-top-bar-left-side .elementor-icon{
+    font-size: 16px !important;
+}
+
+.tahefobu-most-top-bar {
+    padding: 5px;
+}
+@media only screen and (max-width:768px){
+    .tahefobu-most-top-bar{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+.tahefobu-most-top-bar .tahefobu-most-top-bar-icon-wrapper i,
+.tahefobu-most-top-bar .tahefobu-most-top-bar-icon-wrapper svg{
+   color: rgb(34, 34, 34);
+   fill: rgb(34, 34, 34);
+}
